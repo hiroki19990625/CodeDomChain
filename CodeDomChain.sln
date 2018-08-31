@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDomChain", "DomCodeGen\CodeDomChain.csproj", "{39A7FE7C-C495-49EB-B915-5755E1662BDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeDomChainTests", "CodeDomChainTests\CodeDomChainTests.csproj", "{9EB4C9A0-1617-4DD4-B0BF-3BAA0893BC23}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{39A7FE7C-C495-49EB-B915-5755E1662BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39A7FE7C-C495-49EB-B915-5755E1662BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39A7FE7C-C495-49EB-B915-5755E1662BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39A7FE7C-C495-49EB-B915-5755E1662BDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EB4C9A0-1617-4DD4-B0BF-3BAA0893BC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EB4C9A0-1617-4DD4-B0BF-3BAA0893BC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EB4C9A0-1617-4DD4-B0BF-3BAA0893BC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EB4C9A0-1617-4DD4-B0BF-3BAA0893BC23}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
