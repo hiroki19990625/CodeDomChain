@@ -2,7 +2,7 @@
 
 namespace CodeDomChain.Nodes
 {
-    public class CodeDomTypeMember<N, P> : CodeDomNodeBase<N, P> where N : CodeTypeMember, new() where P : ICodeTypeMembers
+    public abstract class CodeDomTypeMember<N, P> : CodeDomNodeBase<N, P> where N : CodeTypeMember, new() where P : ICodeTypeMembers
     {
         public CodeDomTypeMember(P parent) : base(parent)
         {
