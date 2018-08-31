@@ -8,15 +8,15 @@ namespace CodeDomChain.Nodes.Tests
         [TestMethod()]
         public void CodeDomRootTest()
         {
-            CodeDomRoot root = new CodeDomRoot();
+            CodeDomRootUnit root = new CodeDomRootUnit();
             root.BeginAssembly(typeof(object).Assembly)//    <- Assembly: System (mscorlib)
-            //    .Continue(typeof(Button).Assembly)         <- Assembly: System.Windows.Forms
+            //    .ContinueAssembly(typeof(Button).Assembly)         <- Assembly: System.Windows.Forms
             .End()
             .BeginNamespace("")
                 .BeginImport("System")
-                .Continue("System.Collections")
+                .ContinueImport("System.Collections")
             .End()
-            .Continue("CodeDomChain.Test")
+            .ContinueNamespace("CodeDomChain.Test")
                 .BeginType("Program")
                 .End()
             .End();

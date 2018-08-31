@@ -3,14 +3,16 @@ using System.Reflection;
 
 namespace CodeDomChain.Nodes
 {
-    public class CodeDomRoot : ICodeDomRoot
+    public class CodeDomRootUnit : ICodeDomRoot, ICodeAttributes
     {
         public CodeCompileUnit Unit { get; }
 
-        public CodeDomRoot()
+        public CodeDomRootUnit()
         {
             this.Unit = new CodeCompileUnit();
         }
+
+        public CodeAttributeDeclarationCollection Attributes => this.Unit.AssemblyCustomAttributes;
 
         public CodeDomNamespace BeginNamespace(string name)
         {
@@ -25,6 +27,11 @@ namespace CodeDomChain.Nodes
         public CodeDomAssembly BeginAssembly(Assembly assembly)
         {
             return new CodeDomAssembly(assembly, this);
+        }
+
+        public CodeDomAttribute<CodeDomRootUnit> BeginAttribute(string name)
+        {
+            return new CodeDomAttribute<CodeDomRootUnit>(name, this);
         }
     }
 }

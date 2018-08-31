@@ -10,7 +10,7 @@ namespace CodeDomChain.Nodes
             this.Parent.Node.Imports.Add(this.Node);
         }
 
-        public CodeDomImport Continue(string name)
+        public CodeDomImport ContinueImport(string name)
         {
             return new CodeDomImport(name, this.Parent);
         }

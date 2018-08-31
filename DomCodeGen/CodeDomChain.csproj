@@ -40,17 +40,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ICodeTypeMembers.cs" />
+    <Compile Include="ICodeTypeParameters.cs" />
+    <Compile Include="ICodeTypeReferences.cs" />
     <Compile Include="Nodes\CodeDomAssembly.cs" />
+    <Compile Include="Nodes\CodeDomAttribute.cs" />
+    <Compile Include="Nodes\CodeDomAttributeArgument.cs" />
+    <Compile Include="Nodes\CodeDomComment.cs" />
+    <Compile Include="Nodes\CodeDomTypeMember.cs" />
     <Compile Include="Nodes\CodeDomNamespace.cs" />
     <Compile Include="Nodes\CodeDomNodeBase.cs" />
-    <Compile Include="Nodes\CodeDomRoot.cs" />
+    <Compile Include="Nodes\CodeDomRootUnit.cs" />
     <Compile Include="ICodeDomNode.cs" />
     <Compile Include="ICodeDomRoot.cs" />
     <Compile Include="Nodes\CodeDomType.cs" />
     <Compile Include="Nodes\CodeDomImport.cs" />
+    <Compile Include="ICodeAttributes.cs" />
+    <Compile Include="ICodeComments.cs" />
+    <Compile Include="ICodeDomAttributeArguments.cs" />
+    <Compile Include="Nodes\CodeDomTypeParameter.cs" />
+    <Compile Include="Nodes\CodeDomTypeReference.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Class.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
