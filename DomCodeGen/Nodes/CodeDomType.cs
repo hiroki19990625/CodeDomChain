@@ -4,7 +4,7 @@ using System.Reflection;
 
 namespace CodeDomChain.Nodes
 {
-    public class CodeDomType : CodeDomNodeBase<CodeTypeDeclaration, CodeDomNamespace>, ICodeComments, ICodeAttributes, ICodeTypeParameters, ICodeTypeReferences, ICodeTypeMembers
+    public class CodeDomType : CodeDomNodeBase<CodeTypeDeclaration, CodeDomNamespace>, ICodeType
     {
         public CodeDomType(string name, CodeDomNamespace parent) : base(parent)
         {

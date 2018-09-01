@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CompileLanguage.cs" />
+    <Compile Include="ICodeType.cs" />
     <Compile Include="ICodeTypeMembers.cs" />
     <Compile Include="ICodeTypeParameters.cs" />
     <Compile Include="ICodeTypeReferences.cs" />
@@ -47,7 +49,11 @@
     <Compile Include="Nodes\CodeDomAttribute.cs" />
     <Compile Include="Nodes\CodeDomAttributeArgument.cs" />
     <Compile Include="Nodes\CodeDomComment.cs" />
-    <Compile Include="Nodes\CodeDomTypeMember.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomConstructor.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomEntryPointMethod.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomMemberMethod.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomMemberMethodBase.cs" />
+    <Compile Include="Nodes\Members\CodeDomTypeMember.cs" />
     <Compile Include="Nodes\CodeDomNamespace.cs" />
     <Compile Include="Nodes\CodeDomNodeBase.cs" />
     <Compile Include="Nodes\CodeDomRootUnit.cs" />
@@ -60,11 +66,13 @@
     <Compile Include="ICodeDomAttributeArguments.cs" />
     <Compile Include="Nodes\CodeDomTypeParameter.cs" />
     <Compile Include="Nodes\CodeDomTypeReference.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomTypeConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram\System.CodeDom_ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
