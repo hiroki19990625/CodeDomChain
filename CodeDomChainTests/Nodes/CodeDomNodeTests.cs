@@ -18,8 +18,17 @@ namespace CodeDomChain.Nodes.Tests
                 .ContinueImport("System.Collections")
             .End()
             .ContinueNamespace("CodeDomChain.Test")
-                .BeginType("Program")
+                .BeginTypeDeclaration("Program")
+                    .BeginEntryPointMethod()
 
+                    .End()
+                .ContinueTypeDeclaration("User")
+                    .BeginConstructor()
+                    .End()
+                    .BeginStaticConstructor()
+                    .End()
+                    .BeginTypeDeclaration("SaveData")
+                    .End()
                 .End()
             .End().Compile();
 

@@ -1,8 +1,9 @@
-﻿using System.CodeDom;
+﻿using CodeDomChain.Nodes.Members;
+using System.CodeDom;
 
 namespace CodeDomChain.Nodes
 {
-    public class CodeDomNamespace : CodeDomNodeBase<CodeNamespace, CodeDomRootUnit>, ICodeComments
+    public class CodeDomNamespace : CodeDomNodeBase<CodeNamespace, CodeDomRootUnit>, ICodeComments, ICodeTypes
     {
         public CodeDomNamespace(string name, CodeDomRootUnit parent) : base(parent)
         {
@@ -10,6 +11,7 @@ namespace CodeDomChain.Nodes
             parent.Unit.Namespaces.Add(this.Node);
         }
 
+        public CodeTypeDeclarationCollection Types => this.Node.Types;
         public CodeCommentStatementCollection Comments => this.Node.Comments;
 
         public CodeDomNamespace ContinueNamespace(string name)
@@ -22,9 +24,9 @@ namespace CodeDomChain.Nodes
             return new CodeDomImport(name, this);
         }
 
-        public CodeDomType BeginType(string name)
+        public CodeDomTypeDeclaration<CodeDomNamespace> BeginTypeDeclaration(string name)
         {
-            return new CodeDomType(name, this);
+            return new CodeDomTypeDeclaration<CodeDomNamespace>(name, this);
         }
 
         public CodeDomComment<CodeDomNamespace> BeginComment(string text)

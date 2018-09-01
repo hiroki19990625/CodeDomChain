@@ -41,14 +41,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CompileLanguage.cs" />
-    <Compile Include="ICodeType.cs" />
+    <Compile Include="ICodeTypeDeclaration.cs" />
     <Compile Include="ICodeTypeMembers.cs" />
     <Compile Include="ICodeTypeParameters.cs" />
     <Compile Include="ICodeTypeReferences.cs" />
+    <Compile Include="ICodeTypes.cs" />
     <Compile Include="Nodes\CodeDomAssembly.cs" />
     <Compile Include="Nodes\CodeDomAttribute.cs" />
     <Compile Include="Nodes\CodeDomAttributeArgument.cs" />
     <Compile Include="Nodes\CodeDomComment.cs" />
+    <Compile Include="Nodes\CodeDomTypeDeclaration.cs" />
+    <Compile Include="Nodes\Members\CodeDomTypeDeclaration.cs" />
+    <Compile Include="Nodes\Members\CodeDomTypeDeclarationBase.cs" />
     <Compile Include="Nodes\Members\Methods\CodeDomConstructor.cs" />
     <Compile Include="Nodes\Members\Methods\CodeDomEntryPointMethod.cs" />
     <Compile Include="Nodes\Members\Methods\CodeDomMemberMethod.cs" />
@@ -59,14 +63,13 @@
     <Compile Include="Nodes\CodeDomRootUnit.cs" />
     <Compile Include="ICodeDomNode.cs" />
     <Compile Include="ICodeDomRoot.cs" />
-    <Compile Include="Nodes\CodeDomType.cs" />
     <Compile Include="Nodes\CodeDomImport.cs" />
     <Compile Include="ICodeAttributes.cs" />
     <Compile Include="ICodeComments.cs" />
     <Compile Include="ICodeDomAttributeArguments.cs" />
     <Compile Include="Nodes\CodeDomTypeParameter.cs" />
     <Compile Include="Nodes\CodeDomTypeReference.cs" />
-    <Compile Include="Nodes\Members\Methods\CodeDomTypeConstructor.cs" />
+    <Compile Include="Nodes\Members\Methods\CodeDomStaticConstructor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
