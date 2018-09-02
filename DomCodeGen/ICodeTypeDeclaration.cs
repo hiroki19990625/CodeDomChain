@@ -1,6 +1,6 @@
 ﻿namespace CodeDomChain
 {
-    public interface ICodeTypeDeclaration : ICodeComments, ICodeAttributes, ICodeTypeParameters, ICodeTypeReferences, ICodeTypeMembers
+    public interface ICodeTypeDeclaration : ICodeCommentCollection, ICodeAttributeCollection, ICodeTypeParameterCollection, ICodeTypeReferenceCollection, ICodeTypeMemberCollection
     {
 
     }

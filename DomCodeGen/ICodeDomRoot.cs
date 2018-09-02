@@ -2,7 +2,7 @@
 
 namespace CodeDomChain
 {
-    public interface ICodeDomRoot : ICodeAttributes
+    public interface ICodeDomRoot : ICodeAttributeCollection
     {
         CodeCompileUnit Unit { get; }
     }

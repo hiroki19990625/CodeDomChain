@@ -2,7 +2,7 @@
 
 namespace CodeDomChain
 {
-    public interface ICodeComments
+    public interface ICodeCommentCollection
     {
         CodeCommentStatementCollection Comments { get; }
     }

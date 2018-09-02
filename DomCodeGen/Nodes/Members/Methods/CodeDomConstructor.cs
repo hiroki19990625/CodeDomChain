@@ -2,7 +2,7 @@
 
 namespace CodeDomChain.Nodes.Members.Methods
 {
-    public class CodeDomConstructor<P> : CodeDomMemberMethodBase<CodeConstructor, P> where P : ICodeTypeMembers
+    public class CodeDomConstructor<P> : CodeDomMemberMethodBase<CodeConstructor, P> where P : ICodeTypeMemberCollection
     {
         public CodeDomConstructor(P parent) : base(parent)
         {

@@ -3,17 +3,18 @@ using System.CodeDom;
 
 namespace CodeDomChain.Nodes
 {
-    public class CodeDomTypeReference<P> : CodeDomNodeBase<CodeTypeReference, P> where P : ICodeTypeReferences
+    public class CodeDomTypeReference<P> : CodeDomNodeBase<CodeTypeReference, P> where P : ICodeTypeReference
     {
         public CodeDomTypeReference(Type type, P parent) : base(parent)
         {
             this.Node = new CodeTypeReference(type);
-            this.Parent.TypeReferences.Add(this.Node);
+            this.Parent.TypeReference = this.Node;
         }
 
-        public CodeDomTypeReference<P> ContinueTypeReference(Type type)
+        public CodeDomTypeReference(string type, P parent) : base(parent)
         {
-            return new CodeDomTypeReference<P>(type, this.Parent);
+            this.Node = new CodeTypeReference(type);
+            this.Parent.TypeReference = this.Node;
         }
     }
 }

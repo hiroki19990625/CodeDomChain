@@ -2,7 +2,7 @@
 
 namespace CodeDomChain
 {
-    public interface ICodeTypes
+    public interface ICodeTypeCollection
     {
         CodeTypeDeclarationCollection Types { get; }
     }

@@ -2,7 +2,7 @@
 
 namespace CodeDomChain
 {
-    public interface ICodeAttributes
+    public interface ICodeAttributeCollection
     {
         CodeAttributeDeclarationCollection Attributes { get; }
     }

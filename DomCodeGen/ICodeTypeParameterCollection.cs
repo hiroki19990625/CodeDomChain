@@ -2,7 +2,7 @@
 
 namespace CodeDomChain
 {
-    public interface ICodeTypeParameters
+    public interface ICodeTypeParameterCollection
     {
         CodeTypeParameterCollection TypeParameters { get; }
     }

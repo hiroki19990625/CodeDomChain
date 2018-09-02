@@ -16,24 +16,24 @@ namespace CodeDomChain.Nodes
 
         public CodeAttributeDeclarationCollection Attributes => this.Unit.AssemblyCustomAttributes;
 
-        public CodeDomNamespace BeginNamespace(string name)
+        public CodeDomNamespaces BeginNamespace(string name)
         {
-            return new CodeDomNamespace(name, this);
+            return new CodeDomNamespaces(name, this);
         }
 
-        public CodeDomAssembly BeginAssembly(string fullName)
+        public CodeDomAssemblies BeginAssembly(string fullName)
         {
-            return new CodeDomAssembly(fullName, this);
+            return new CodeDomAssemblies(fullName, this);
         }
 
-        public CodeDomAssembly BeginAssembly(Assembly assembly)
+        public CodeDomAssemblies BeginAssembly(Assembly assembly)
         {
-            return new CodeDomAssembly(assembly, this);
+            return new CodeDomAssemblies(assembly, this);
         }
 
-        public CodeDomAttribute<CodeDomRootUnit> BeginAttribute(string name)
+        public CodeDomAttributes<CodeDomRootUnit> BeginAttribute(string name)
         {
-            return new CodeDomAttribute<CodeDomRootUnit>(name, this);
+            return new CodeDomAttributes<CodeDomRootUnit>(name, this);
         }
 
         public string Compile()
